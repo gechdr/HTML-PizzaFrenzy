@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pizza Frenzy</title>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="gameArea">
+				<input type="button" value="Pizza Frenzy" id="btnPizzaFrenzy" class="btnPizzaFrenzy" onclick="cheat()" />
+				<div class="map" id="map"></div>
+			</div>
+			<div class="orderArea">
+				<div class="cashArea">
+					<span class="cash">Cash: $</span>
+					<span class="cash" id="cash">0</span>
+				</div>
+				<div class="activePanel">
+					<span class="activeLabel">Active</span>
+					<div class="activeOrder" id="activeOrder"></div>
+				</div>
+				<div class="upgradePanel">
+					<span class="upgradeLabel">Upgrades</span>
+					<div class="upgradeMenu">
+						<div class="menuKiri">
+							<div class="upgradePizza"><span>Mushroom Pizza</span></div>
+							<div class="upgradePrice"><span id="mushroomUpPrice">$10</span></div>
+							<div class="pbHitam">
+								<div class="progressBar" id="mushroomProgressBar3"></div>
+								<div class="progressBar" id="mushroomProgressBar2"></div>
+								<div class="progressBar" id="mushroomProgressBar1"></div>
+							</div>
+						</div>
+						<div class="menuKanan">
+							<input type="button" value="+" class="btnUpgrade" id="btnUpgradeMushroom" onclick="upgrade('Mushroom')" />
+						</div>
+					</div>
+					<div class="upgradeMenu">
+						<div class="menuKiri">
+							<div class="upgradePizza"><span>Pepperoni Pizza</span></div>
+							<div class="upgradePrice"><span id="pepperoniUpPrice">$10</span></div>
+							<div class="pbHitam">
+								<div class="progressBar" id="pepperoniProgressBar3"></div>
+								<div class="progressBar" id="pepperoniProgressBar2"></div>
+								<div class="progressBar" id="pepperoniProgressBar1"></div>
+							</div>
+						</div>
+						<div class="menuKanan">
+							<input type="button" value="+" class="btnUpgrade" id="btnUpgradePepperoni" onclick="upgrade('Pepperoni')" />
+						</div>
+					</div>
+				</div>
+				<div class="makePanel">
+					<button class="makeMenuMushroom" id="makePizzaMushroom" onclick="make('Mushroom')" ;>
+						<span class="make">Make</span>
+						<span class="pizza">Mushroom</span>
+					</button>
+					<button class="makeMenuPepperoni" id="makePizzaPepperoni" onclick="make('Pepperoni')">
+						<span class="make">Make</span>
+						<span class="pizza">Pepperoni</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
